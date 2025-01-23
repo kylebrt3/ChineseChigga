@@ -1,28 +1,161 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #FFF8E7;
+    color: #6B0F1A;
+}
+
 nav {
-    background-color:#6B0F1A;
-    padding : 1rem;
+    background-color: #6B0F1A;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    position: fixed;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 75%;
+    border-radius: 30px;
+    border: 2px solid #FFC300;
+    z-index: 10;
 }
 
 nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
     display: flex;
-    gap: 1rem;
-  }
+    list-style: none;
+}
+
+nav .left {
+    margin-right: auto;
+}
+
+nav .right {
+    margin-left: auto;
+    gap: 10px;
+}
 
 nav a {
-    color: #6B0F1A;
-    background-color:#FFC300;
+    color: #FFC300;
     text-decoration: none;
-    transition: color 0.3s, background-color 0.3s;
-    padding: 0.5rem 1rem;
     font-weight: bold;
+    padding: 10px 15px;
+    transition: color 0.3s, background-color 0.3s;
+    border-radius: 30px;
 }
 
 nav a:hover {
-    background-color:#FFD966;
-    border-radius: 5px;
-    color:#4C0F15;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: #FFD966;
+    color: #4C0F15;
+}
+
+.hero {
+    height: 100vh;
+    background: url('babipangang.jpeg') no-repeat center center/cover;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    text-align: center;
+}
+
+.hero:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.hero-content {
+    z-index: 2;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.hero p {
+    font-size: 1.25rem;
+    margin-bottom: 20px;
+}
+
+.cta-button {
+    font-weight: bold;
+    background-color: #FFC300;
+    color: #6B0F1A;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    border-radius: 30px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    display: inline-block;
+    text-align: center;
+}
+
+.cta-button:hover {
+    background-color: #FFD966;
+    transform: scale(1.05);
+}
+
+.cta-button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.food-preview {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+    padding: 80px 20px;
+}
+
+.food-description h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #6B0F1A;
+}
+
+.food-description p {
+    font-size: 1.25rem;
+    color: #4C0F15;
+}
+
+.food-image img {
+    width: 100%;
+    height: auto;
+    max-width: 50%;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.food-image img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+footer {
+    background-color: #6B0F1A;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
 }
